@@ -1,0 +1,155 @@
+<Defs>
+
+<HediffDef>
+      <defName>Stim-OmoneSTNL</defName>
+	  <defaultLabelColor>(1, 0, 0)</defaultLabelColor>
+      <label>Stim-Omone</label>
+      <description>This animal is being affected by pheromones, slightly enhancing their speed and consciousness.</description>
+      <descriptionShort>This animal is being affected by pheromones, slightly enhancing their speed and consciousness.</descriptionShort>
+      <isBad>false</isBad>
+      <stages>
+        <li>
+         <statFactors>
+<MoveSpeed>1.15</MoveSpeed>
+</statFactors>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>0.1</offset>
+</li>
+</capMods>
+        </li>
+      </stages>
+    </HediffDef>
+	
+	<HediffDef>
+      <defName>Guard-OmoneSTNL</defName>
+	  <defaultLabelColor>(0, 0, 1)</defaultLabelColor>
+      <label>Guard-Omone</label>
+      <description>This animal is being affected by pheromones, slightly enhancing their ability to endure damage.</description>
+      <descriptionShort>This animal is being affected by pheromones, slightly enhancing their ability to endure damage.</descriptionShort>
+      <isBad>false</isBad>
+      <stages>
+        <li>
+         <statFactors>
+<IncomingDamageFactor>0.90</IncomingDamageFactor>
+</statFactors>
+        </li>
+      </stages>
+    </HediffDef>
+	
+	<HediffDef>
+      <defName>Boost-OmoneSTNL</defName>
+	  <defaultLabelColor>(0, 1.0, 0)</defaultLabelColor>
+      <label>Immun-Omone</label>
+      <description>This animal is being affected by pheromones, slightly enhancing their immunity gain against several conditions.</description>
+      <descriptionShort>This animal is being affected by pheromones, slightly enhancing their immunity gain against several conditions.</descriptionShort>
+      <isBad>false</isBad>
+      <stages>
+        <li>
+         <statFactors>
+<ImmunityGainSpeed>1.50</ImmunityGainSpeed>
+</statFactors>
+        </li>
+      </stages>
+    </HediffDef>
+
+<HediffDef>
+      <defName>FuromoneSTNL</defName>
+	  <defaultLabelColor>(1.0, 0, 0)</defaultLabelColor>
+	  <hediffClass>HediffWithComps</hediffClass>
+      <label>Fury-Omone</label>
+      <description>This animal is being affected by pheromones, enhancing their speed and attack speed for a while.</description>
+      <descriptionShort>This animal is being affected by pheromones, enhancing their speed and attack speed for a while.</descriptionShort>
+      <isBad>false</isBad>
+      <stages>
+        <li>
+         <statFactors>
+<MoveSpeed>1.30</MoveSpeed>
+<VEF_MeleeAttackSpeedFactor>3</VEF_MeleeAttackSpeedFactor>
+</statFactors>
+        </li>
+      </stages>
+	  <comps>
+        <li Class="HediffCompProperties_Disappears">
+          <disappearsAfterTicks>
+            <min>12000</min>
+            <max>12000</max>
+          </disappearsAfterTicks>
+        </li>
+      </comps>
+    </HediffDef>
+
+<HediffDef>
+      <defName>NoPainomoneSTNL</defName>
+	  <defaultLabelColor>(0, 0, 1.0)</defaultLabelColor>
+	  <hediffClass>HediffWithComps</hediffClass>
+      <label>Pain-Omone</label>
+      <description>This animal is being affected by pheromones, effectively shutting down their pain receptors and causing their skin to harden slightly for a while.</description>
+      <descriptionShort>This animal is being affected by pheromones, effectively shutting down their pain receptors and causing their skin to harden slightly for a while.</descriptionShort>
+      <isBad>false</isBad>
+      <stages>
+        <li>
+      <painFactor>0</painFactor>
+         <statFactors>
+		 <IncomingDamageFactor>0.75</IncomingDamageFactor>
+		 </statFactors>
+        </li>
+      </stages>
+	  <comps>
+        <li Class="HediffCompProperties_Disappears">
+          <disappearsAfterTicks>
+            <min>12000</min>
+            <max>12000</max>
+          </disappearsAfterTicks>
+        </li>
+      </comps>
+    </HediffDef>
+	
+	<HediffDef>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(0, 1.0, 0)</defaultLabelColor>
+      <defName>Heal-OmoneSTNL</defName>
+      <label>Heal-Omone</label>
+      <description>This animal is being affected by pheromones, massively enhancing their healing factor for a short time.</description>
+      <descriptionShort>This animal is being affected by pheromones, massively enhancing their healing factor for a short time.</descriptionShort>
+      <isBad>false</isBad>
+      <stages>
+        <li>
+		<naturalHealingFactor>20</naturalHealingFactor>
+         <statFactors>
+		 <InjuryHealingFactor>500</InjuryHealingFactor>
+		 </statFactors>
+        </li>
+      </stages>
+	  <comps>
+        <li Class="HediffCompProperties_Disappears">
+          <disappearsAfterTicks>
+            <min>5800</min>
+            <max>5800</max>
+          </disappearsAfterTicks>
+        </li>
+      </comps>
+    </HediffDef>
+	
+	<HediffDef>
+      <defName>Pawn-OmoneSTNL</defName>
+	  <defaultLabelColor>(1, 0.20, 1)</defaultLabelColor>
+      <label>Pawn-Omone</label>
+      <description>This pawn is being affected by pheromones, slightly enhancing several capabilities (Healing, Defense, Mov/Atk Speed).</description>
+      <descriptionShort>This pawn is being affected by pheromones, slightly enhancing several capabilities (Healing, Defense, Mov/Atk Speed).</descriptionShort>
+      <isBad>false</isBad>
+<stages>
+        <li>
+		<painFactor>0.80</painFactor>
+		<naturalHealingFactor>1.50</naturalHealingFactor>
+         <statFactors>
+<VEF_RangeAttackSpeedFactor>1.50</VEF_RangeAttackSpeedFactor>
+<VEF_MeleeAttackSpeedFactor>1.50</VEF_MeleeAttackSpeedFactor>
+		 <MoveSpeed>1.10</MoveSpeed>
+		 <InjuryHealingFactor>1.5</InjuryHealingFactor>
+		 </statFactors>
+        </li>
+      </stages>
+    </HediffDef>
+</Defs>

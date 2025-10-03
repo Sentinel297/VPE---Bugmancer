@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_MinibugSTNL</defName>
+		<label>Manifest Megascarab</label>
+		<description>Psychically manifest distress pheromones, causing a Megascarab to answer the call.</description>
+		<iconPath>UI_Bugmancer/Abilities/Megascarab</iconPath>
+		<abilityClass>VPE_BugmancerSTNL.Ability_SummonMegascarabSTNL</abilityClass>
+		<goodwillImpact>0</goodwillImpact>
+		<castTime>30</castTime>
+		<durationTime>0</durationTime>
+		<needsTicking>true</needsTicking>
+		<targetMode>Location</targetMode>
+		<range>14.9</range>
+		<castSound>Psycast_Skip_Pulse</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>1</level>
+				<order>1</order>
+				<psyfocusCost>0.15</psyfocusCost>
+				<entropyGain>35</entropyGain>
+			</li>
+							<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>CocoonWakingUp</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>1</scale>
+</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_StimSTNL</defName>
+		<label>Stim-Omone</label>
+		<description>Manifest pheromones into an animal, slightly enhancing their speed and consciousness.</description>
+		<iconPath>UI_Bugmancer/Abilities/Gene</iconPath>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<goodwillImpact>0</goodwillImpact>
+		<castTime>30</castTime>
+    	<range>12.9</range>
+		<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>False</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>False</canTargetHumans>
+			<canTargetMechs>False</canTargetMechs>
+		</targetingParameters>
+		<castSound>Psycast_Skip_Pulse</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>2</level>
+				<order>3</order>
+				<psyfocusCost>0.30</psyfocusCost>
+				<entropyGain>35</entropyGain>
+								<prerequisites><li>VPE_MinibugSTNL</li>
+				</prerequisites>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
+				<hediff>Stim-OmoneSTNL</hediff>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+	
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_GuardSTNL</defName>
+		<label>Guard-Omone</label>
+		<description>Manifest pheromones into an animal, slightly enhancing their ability to endure damage.</description>
+		<iconPath>UI_Bugmancer/Abilities/Blue</iconPath>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<goodwillImpact>0</goodwillImpact>
+		<castTime>30</castTime>
+    	<range>12.9</range>
+		<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>False</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>False</canTargetHumans>
+			<canTargetMechs>False</canTargetMechs>
+		</targetingParameters>
+		<castSound>Psycast_Skip_Pulse</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>2</level>
+				<order>2</order>
+				<psyfocusCost>0.30</psyfocusCost>
+				<entropyGain>35</entropyGain>
+								<prerequisites><li>VPE_MinibugSTNL</li>
+				</prerequisites>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
+				<hediff>Guard-OmoneSTNL</hediff>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+	
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_ImmunSTNL</defName>
+		<label>Immun-Omone</label>
+		<description>Manifest pheromones into an animal, slightly enhancing their immunity gain against several conditions.</description>
+		<iconPath>UI_Bugmancer/Abilities/Green</iconPath>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<goodwillImpact>0</goodwillImpact>
+		<castTime>30</castTime>
+    	<range>12.9</range>
+		<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>False</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>False</canTargetHumans>
+			<canTargetMechs>False</canTargetMechs>
+		</targetingParameters>
+		<castSound>Psycast_Skip_Pulse</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>2</level>
+				<order>1</order>
+				<psyfocusCost>0.30</psyfocusCost>
+				<entropyGain>35</entropyGain>
+								<prerequisites><li>VPE_MinibugSTNL</li>
+				</prerequisites>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
+				<hediff>Boost-OmoneSTNL</hediff>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+	
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_bugSTNL</defName>
+		<label>Manifest Spelopede</label>
+		<description>Psychically manifest distress pheromones, causing a Spelopede to answer the call.</description>
+		<iconPath>UI_Bugmancer/Abilities/Spelopede</iconPath>
+		<abilityClass>VPE_BugmancerSTNL.Ability_SummonSpelopedeSTNL</abilityClass>
+		<goodwillImpact>0</goodwillImpact>
+		<castTime>70</castTime>
+		<needsTicking>true</needsTicking>
+		<durationTime>0</durationTime>
+		<targetMode>Location</targetMode>
+		<range>14.9</range>
+		<castSound>Psycast_Skip_Pulse</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>3</level>
+				<order>1</order>
+				<psyfocusCost>0.3</psyfocusCost>
+				<entropyGain>35</entropyGain>
+				<prerequisites>
+				<li>VPE_ImmunSTNL</li>
+				<li>VPE_GuardSTNL</li>
+				<li>VPE_StimSTNL</li>
+				</prerequisites>
+			</li>
+							<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>CocoonWakingUp</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>1</scale>
+</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_FurySTNL</defName>
+		<label>Fury-Omone</label>
+		<description>Manifest pheromones into an animal, massively enhancing their fighting capabilities for a while.</description>
+		<iconPath>UI_Bugmancer/Abilities/Fury</iconPath>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<goodwillImpact>0</goodwillImpact>
+		<castTime>30</castTime>
+		<durationTime>12000</durationTime>
+    	<range>12.9</range>
+		<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>False</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>False</canTargetHumans>
+			<canTargetMechs>False</canTargetMechs>
+		</targetingParameters>
+		<castSound>Psycast_Skip_Pulse</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>4</level>
+				<order>3</order>
+				<psyfocusCost>0.75</psyfocusCost>
+				<entropyGain>35</entropyGain>
+<prerequisites><li>VPE_bugSTNL</li></prerequisites>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
+				<hediff>FuromoneSTNL</hediff>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+	
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_PainlessSTNL</defName>
+		<label>Pain-Omone</label>
+		<description>Manifest pheromones into an animal, effectively shutting down their pain receptors and causing their skin to harden slightly for a while.</description>
+		<iconPath>UI_Bugmancer/Abilities/Painless</iconPath>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<goodwillImpact>0</goodwillImpact>
+		<castTime>30</castTime>
+		<durationTime>12000</durationTime>
+    	<range>12.9</range>
+		<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>False</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>False</canTargetHumans>
+			<canTargetMechs>False</canTargetMechs>
+		</targetingParameters>
+		<castSound>Psycast_Skip_Pulse</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>4</level>
+				<order>2</order>
+				<psyfocusCost>0.75</psyfocusCost>
+				<entropyGain>35</entropyGain>
+				<prerequisites><li>VPE_bugSTNL</li></prerequisites>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
+				<hediff>NoPainomoneSTNL</hediff>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+	
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_HealingSTNL</defName>
+		<label>Heal-Omone</label>
+		<description>Manifest pheromones into an animal, massively enhancing their healing factor for a short time.</description>
+		<iconPath>UI_Bugmancer/Abilities/Healing</iconPath>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<goodwillImpact>0</goodwillImpact>
+		<castTime>30</castTime>
+		<durationTime>5000</durationTime>
+    	<range>12.9</range>
+		<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>False</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>False</canTargetHumans>
+			<canTargetMechs>False</canTargetMechs>
+		</targetingParameters>
+		<castSound>Psycast_Skip_Pulse</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>4</level>
+				<order>1</order>
+				<psyfocusCost>0.75</psyfocusCost>
+				<entropyGain>35</entropyGain>
+								<prerequisites><li>VPE_bugSTNL</li>
+				</prerequisites>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
+				<hediff>Heal-OmoneSTNL</hediff>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+	
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_BigbugSTNL</defName>
+		<label>Manifest Megaspider</label>
+		<description>Psychically manifest distress pheromones, causing a Megaspider to answer the call.</description>
+		<iconPath>UI_Bugmancer/Abilities/Megaspider_South</iconPath>
+		<abilityClass>VPE_BugmancerSTNL.Ability_SummonMegaspiderSTNL</abilityClass>
+		<goodwillImpact>0</goodwillImpact>
+		<castTime>150</castTime>
+		<durationTime>0</durationTime>
+		<needsTicking>true</needsTicking>
+		<targetMode>Location</targetMode>
+		<range>14.9</range>
+		<castSound>Psycast_Skip_Pulse</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>5</level>
+				<order>1</order>
+				<psyfocusCost>0.5</psyfocusCost>
+				<entropyGain>35</entropyGain>
+				                <prerequisites>
+				<li>VPE_HealingSTNL</li>
+				<li>VPE_PainlessSTNL</li>
+				<li>VPE_FurySTNL</li>
+				</prerequisites>
+			</li>
+				<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>CocoonWakingUp</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>1</scale>
+</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_BugSelfSTNL</defName>
+		<label>Bug Self</label>
+		<description>Use your experience with bug pheromones to replicate a sample viable for humans, slightly enhancing several of this pawn's capabilities (Healing, Defense, Mov/Atk Speed).</description>
+		<iconPath>UI_Bugmancer/Abilities/BugSelf</iconPath>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<goodwillImpact>0</goodwillImpact>
+		<castTime>30</castTime>
+		<range>12.9</range>
+		<durationTime>0</durationTime>
+		<castSound>Psycast_Skip_Pulse</castSound>
+		<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>False</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>False</canTargetMechs>
+		</targetingParameters>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>6</level>
+				<order>1</order>
+				<psyfocusCost>0.3</psyfocusCost>
+				<entropyGain>35</entropyGain>
+				<prerequisites>
+				<li>VPE_BigbugSTNL</li>
+				</prerequisites>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
+				<hediff>Pawn-OmoneSTNL</hediff>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_BugSefSTNL</defName>
+<label>Conjure Hive</label>
+<description>Use your experience with insectoids to replicate one of their hives for the colony.</description>
+<iconPath>UI_Bugmancer/Abilities/Hive</iconPath>
+<castTime>300</castTime>
+<castSound>VPE_IceCrystal_Cast</castSound>
+<range>6.9</range>
+<targetMode>Location</targetMode>
+<abilityClass>VEF.Abilities.Ability_SpawnBuilding</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_BugmancerSTNL</path>
+<level>6</level>
+<order>2</order>
+<psyfocusCost>0.50</psyfocusCost>
+<entropyGain>100</entropyGain>
+<prerequisites>
+				<li>VPE_BigbugSTNL</li>
+				</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Building">
+<building>BugHiveSTNL</building>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>Skip_EntryNoDelay</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>1</scale>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<ThingDef ParentName="BuildingNaturalBase">
+    <defName>BugHiveSTNL</defName>
+    <label>hive</label>
+    <description>A hive of giant insects. If activated, it will spawn additional insects and hives over time, as well as valuable insect jelly.</description>
+    <thingClass>Hive</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Natural/Hive</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>1.6</drawSize>
+    </graphicData>
+    <uiIconScale>0.65</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <statBases>
+      <MaxHitPoints>130</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <pathCost>42</pathCost>
+    <receivesSignals>true</receivesSignals>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <killedLeavings>
+      <InsectJelly>30</InsectJelly>
+    </killedLeavings>
+    <comps>
+      <li Class="CompProperties_CanBeDormant">
+        <startsDormant>true</startsDormant>
+        <canWakeUpFogged>false</canWakeUpFogged>
+      </li>
+      <li Class="CompProperties_WakeUpDormant" />
+      <li Class="CompProperties_SpawnerPawn">
+        <spawnablePawnKinds>
+          <li>Megascarab</li>
+          <li>Spelopede</li>
+          <li>Megaspider</li>
+        </spawnablePawnKinds>
+        <lordJob>LordJob_AssaultColony</lordJob>
+        <spawnSound>Hive_Spawn</spawnSound>
+        <initialPawnsPoints>200</initialPawnsPoints>
+        <maxSpawnedPawnsPoints>500</maxSpawnedPawnsPoints>
+      </li>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>6000</ticksPerHeal> <!-- 60k ticks = 1 day, 10 hp per day -->
+      </li>
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>InsectJelly</thingToSpawn>
+        <spawnCount>20</spawnCount>
+        <spawnIntervalRange>26000~30000</spawnIntervalRange>
+        <spawnMaxAdjacent>40</spawnMaxAdjacent>
+        <spawnForbidden>true</spawnForbidden>
+        <saveKeysPrefix>jelly</saveKeysPrefix>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <heatPerSecond>6</heatPerSecond>
+        <heatPushMaxTemperature>38</heatPushMaxTemperature>
+      </li>
+    </comps>
+  </ThingDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_BugpodSTNL</defName>
+<label>Conjure glowpod</label>
+<description>Use your experience with insectoids to replicate one of their glowpods for the colony.</description>
+<iconPath>UI_Bugmancer/Abilities/GlowPod</iconPath>
+<castTime>60</castTime>
+<castSound>VPE_IceCrystal_Cast</castSound>
+<durationTime>300000</durationTime>
+<range>6.9</range>
+<targetMode>Location</targetMode>
+<abilityClass>VEF.Abilities.Ability_SpawnBuilding</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_BugmancerSTNL</path>
+<level>6</level>
+<order>2</order>
+<psyfocusCost>0.10</psyfocusCost>
+<entropyGain>10</entropyGain>
+<prerequisites>
+				<li>VPE_BugSefSTNL</li>
+				</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Building">
+<building>GlowPod</building>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>Skip_EntryNoDelay</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>0.42</scale>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+</Defs>

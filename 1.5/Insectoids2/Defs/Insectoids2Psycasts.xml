@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_BugworkerhiveSTNL</defName>
+<label>Conjure Worker Hive</label>
+<description>Use your experience with megascarabs to replicate one of their worker hives for the colony.</description>
+<iconPath>Things/Building/BasicHive</iconPath>
+<castTime>300</castTime>
+<castSound>VPE_IceCrystal_Cast</castSound>
+<range>6.9</range>
+<targetMode>Location</targetMode>
+<abilityClass>VFECore.Abilities.Ability_SpawnBuilding</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_BugmancerSTNL</path>
+<level>1</level>
+<order>1</order>
+<psyfocusCost>0.50</psyfocusCost>
+<entropyGain>50</entropyGain>
+<prerequisites>
+				<li>VPE_MinibugSTNL</li>
+				</prerequisites>
+</li>
+<li Class="VFECore.Abilities.AbilityExtension_Building">
+<building>VFEI2_ArtificialBasicHive</building>
+</li>
+<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>Skip_EntryNoDelay</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>1</scale>
+</li>
+</modExtensions>
+</VFECore.Abilities.AbilityDef>
+
+<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_CreepSTNL</defName>
+<label>Conjure Creeper</label>
+<description>Use your experience with megascarabs to recreate a creeper for the colony.</description>
+<iconPath>Things/Building/Creeper</iconPath>
+<castTime>300</castTime>
+<castSound>VPE_IceCrystal_Cast</castSound>
+<range>6.9</range>
+<targetMode>Location</targetMode>
+<abilityClass>VFECore.Abilities.Ability_SpawnBuilding</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_BugmancerSTNL</path>
+<level>1</level>
+<order>3</order>
+<psyfocusCost>0.50</psyfocusCost>
+<entropyGain>50</entropyGain>
+<prerequisites>
+				<li>VPE_MinibugSTNL</li>
+				</prerequisites>
+</li>
+<li Class="VFECore.Abilities.AbilityExtension_Building">
+<building>VFEI2_Creeper</building>
+</li>
+<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>Skip_EntryNoDelay</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>1</scale>
+</li>
+</modExtensions>
+</VFECore.Abilities.AbilityDef>
+
+<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_IroncladSTNL</defName>
+		<label>Manifest Ironclad</label>
+		<description>Psychically manifest distress pheromones, causing an Ironclad to answer the call.</description>
+		<iconPath>UI_Bugmancer/Abilities/Ironclad</iconPath>
+		<abilityClass>VPE_BugmancerSTNL.Ability_SummonIroncladSTNL</abilityClass>
+		<goodwillImpact>0</goodwillImpact>
+		<castTime>150</castTime>
+		<durationTime>0</durationTime>
+		<needsTicking>true</needsTicking>
+		<targetMode>Location</targetMode>
+		<range>14.9</range>
+		<castSound>Psycast_Skip_Pulse</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>5</level>
+				<order>3</order>
+				<psyfocusCost>0.5</psyfocusCost>
+				<entropyGain>35</entropyGain>
+				                <prerequisites>
+				<li>VPE_BigbugSTNL</li>
+				</prerequisites>
+			</li>
+				<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>CocoonWakingUp</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>1</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_HellbeetleSTNL</defName>
+		<label>Manifest Hellbeetle</label>
+		<description>Psychically manifest distress pheromones, causing an Hellbeetle to answer the call.</description>
+		<iconPath>UI_Bugmancer/Abilities/Hellbeetle</iconPath>
+		<abilityClass>VPE_BugmancerSTNL.Ability_SummonHellbeetleSTNL</abilityClass>
+		<goodwillImpact>0</goodwillImpact>
+		<castTime>150</castTime>
+		<durationTime>0</durationTime>
+		<needsTicking>true</needsTicking>
+		<targetMode>Location</targetMode>
+		<range>14.9</range>
+		<castSound>Psycast_Skip_Pulse</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>5</level>
+				<order>1</order>
+				<psyfocusCost>0.5</psyfocusCost>
+				<entropyGain>35</entropyGain>
+				                <prerequisites>
+				<li>VPE_BigbugSTNL</li>
+				</prerequisites>
+			</li>
+				<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>CocoonWakingUp</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>1</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_DurapodSTNL</defName>
+		<label>Manifest Durapod</label>
+		<description>Psychically manifest distress pheromones, causing a Durapod to answer the call.</description>
+		<iconPath>UI_Bugmancer/Abilities/Durapod</iconPath>
+		<abilityClass>VPE_BugmancerSTNL.Ability_SummonDurapodSTNL</abilityClass>
+		<goodwillImpact>0</goodwillImpact>
+		<castTime>150</castTime>
+		<durationTime>0</durationTime>
+		<needsTicking>true</needsTicking>
+		<targetMode>Location</targetMode>
+		<range>14.9</range>
+		<castSound>Psycast_Skip_Pulse</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>3</level>
+				<order>1</order>
+				<psyfocusCost>0.3</psyfocusCost>
+				<entropyGain>35</entropyGain>
+				                <prerequisites>
+				<li>VPE_bugSTNL</li>
+				</prerequisites>
+			</li>
+				<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>CocoonWakingUp</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>1</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_MacroflySTNL</defName>
+		<label>Manifest Macrofly</label>
+		<description>Psychically manifest distress pheromones, causing a Macrofly to answer the call.</description>
+		<iconPath>UI_Bugmancer/Abilities/Macrofly</iconPath>
+		<abilityClass>VPE_BugmancerSTNL.Ability_SummonMacroflySTNL</abilityClass>
+		<goodwillImpact>0</goodwillImpact>
+		<castTime>150</castTime>
+		<durationTime>0</durationTime>
+		<needsTicking>true</needsTicking>
+		<targetMode>Location</targetMode>
+		<range>14.9</range>
+		<castSound>Psycast_Skip_Pulse</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>3</level>
+				<order>3</order>
+				<psyfocusCost>0.3</psyfocusCost>
+				<entropyGain>35</entropyGain>
+				                <prerequisites>
+				<li>VPE_bugSTNL</li>
+				</prerequisites>
+			</li>
+				<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>CocoonWakingUp</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>1</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_Chestburster1STNL</defName>
+		<label>Gestate Empress</label>
+		<description>Psychically manifest Empress class pheromones inside of the target, causing them to become an Empress host.</description>
+		<iconPath>UI_Bugmancer/Abilities/GestateEmpress</iconPath>
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<needsTicking>true</needsTicking>
+		<castTime>350</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<range>12.9</range>
+		<durationTime>0</durationTime>
+		<targetingParameters>
+		    <canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetMechs>False</canTargetMechs>
+			<canTargetHumans>True</canTargetHumans>
+		</targetingParameters>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>7</level>
+				<order>1</order>
+				<psyfocusCost>0.30</psyfocusCost>
+				<entropyGain>250</entropyGain>
+				<prerequisites>
+          <li>VPE_BugSefSTNL</li>
+        </prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+				<hediff>VFEI2_EmpressSpawn</hediff>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>CocoonWakingUp</effecterDef>
+<maintainForTicks>30</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_Chestburster2STNL</defName>
+		<label>Gestate Gigamite</label>
+		<description>Psychically manifest Gigamite class pheromones inside of the target, causing them to become a Gigamite host.</description>
+		<iconPath>UI_Bugmancer/Abilities/GestateGigamite</iconPath>
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<needsTicking>true</needsTicking>
+		<castTime>350</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<range>12.9</range>
+		<durationTime>0</durationTime>
+		<targetingParameters>
+		    <canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetMechs>False</canTargetMechs>
+			<canTargetHumans>True</canTargetHumans>
+		</targetingParameters>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>7</level>
+				<order>2</order>
+				<psyfocusCost>0.30</psyfocusCost>
+				<entropyGain>250</entropyGain>
+				<prerequisites>
+          <li>VPE_BugSefSTNL</li>
+        </prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+				<hediff>VFEI2_GigamiteSpawn</hediff>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>CocoonWakingUp</effecterDef>
+<maintainForTicks>30</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_Chestburster3STNL</defName>
+		<label>Gestate Titantick</label>
+		<description>Psychically manifest Titantick class pheromones inside of the target, causing them to become a Titantick host.</description>
+		<iconPath>UI_Bugmancer/Abilities/GestateTitantick</iconPath>
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<needsTicking>true</needsTicking>
+		<castTime>350</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<range>12.9</range>
+		<durationTime>0</durationTime>
+		<targetingParameters>
+		    <canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetMechs>False</canTargetMechs>
+			<canTargetHumans>True</canTargetHumans>
+		</targetingParameters>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>7</level>
+				<order>3</order>
+				<psyfocusCost>0.30</psyfocusCost>
+				<entropyGain>250</entropyGain>
+				<prerequisites>
+          <li>VPE_BugSefSTNL</li>
+        </prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+				<hediff>VFEI2_TitantickSpawn</hediff>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>CocoonWakingUp</effecterDef>
+<maintainForTicks>30</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+
+<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_PatriarchSTNL</defName>
+		<label>Manifest Patriarch</label>
+		<description>Psychically manifest distress pheromones, causing a Patriarch to answer the call, the process will cause the pawn to fall into a 1 day coma.</description>
+		<iconPath>UI_Bugmancer/Abilities/Patriarch</iconPath>
+		<abilityClass>VPE_BugmancerSTNL.Ability_SummonPatriarchSTNL</abilityClass>
+		<goodwillImpact>0</goodwillImpact>
+		<castTime>150</castTime>
+		<durationTime>60000</durationTime>
+		<needsTicking>true</needsTicking>
+		<targetMode>Location</targetMode>
+		<range>14.9</range>
+		<castSound>Psycast_Skip_Pulse</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>8</level>
+				<order>2</order>
+				<psyfocusCost>0.99</psyfocusCost>
+				<entropyGain>250</entropyGain>
+				                <prerequisites>
+				<li>VPE_Chestburster2STNL</li>
+				</prerequisites>
+			</li>
+				<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>CocoonWakingUp</effecterDef>
+<maintainForTicks>30</maintainForTicks>
+<scale>2</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_QueenSummonSTNL</defName>
+		<label>Manifest Queen</label>
+		<description>Psychically manifest distress pheromones, causing a Queen to answer the call, the process will cause the pawn to fall into a 1 day coma.</description>
+		<iconPath>UI_Bugmancer/Abilities/Queen</iconPath>
+		<abilityClass>VPE_BugmancerSTNL.Ability_SummonQueenSTNL</abilityClass>
+		<goodwillImpact>0</goodwillImpact>
+		<castTime>150</castTime>
+		<durationTime>60000</durationTime>
+		<needsTicking>true</needsTicking>
+		<targetMode>Location</targetMode>
+		<range>14.9</range>
+		<castSound>Psycast_Skip_Pulse</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>8</level>
+				<order>3</order>
+				<psyfocusCost>0.99</psyfocusCost>
+				<entropyGain>250</entropyGain>
+				                <prerequisites>
+				<li>VPE_Chestburster3STNL</li>
+				</prerequisites>
+			</li>
+				<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>CocoonWakingUp</effecterDef>
+<maintainForTicks>30</maintainForTicks>
+<scale>2</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_EmpressSTNL</defName>
+		<label>Manifest Empress</label>
+		<description>Psychically manifest distress pheromones, causing an Empress to answer the call, the process will cause the pawn to fall into a 1 day coma.</description>
+		<iconPath>UI_Bugmancer/Abilities/Empress</iconPath>
+		<abilityClass>VPE_BugmancerSTNL.Ability_SummonEmpressSTNL</abilityClass>
+		<goodwillImpact>0</goodwillImpact>
+		<castTime>150</castTime>
+		<durationTime>60000</durationTime>
+		<needsTicking>true</needsTicking>
+		<targetMode>Location</targetMode>
+		<range>14.9</range>
+		<castSound>Psycast_Skip_Pulse</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_BugmancerSTNL</path>
+				<level>8</level>
+				<order>1</order>
+				<psyfocusCost>0.99</psyfocusCost>
+				<entropyGain>250</entropyGain>
+				                <prerequisites>
+				<li>VPE_Chestburster1STNL</li>
+				</prerequisites>
+			</li>
+				<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>CocoonWakingUp</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>2</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+
+</Defs>

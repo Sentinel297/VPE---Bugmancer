@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_BugmancerSTNL</defName>
+    <label>Bugmancer</label>
+    <description>Draw the attention of the bugs of the rim and make them yours.</description>
+    <background>UI_Bugmancer/Tree/Bugtreebase</background>
+    <altBackground>UI_Bugmancer/Tree/Bugtreebase</altBackground>
+    <tab>Misc</tab>
+    <tooltip>Draw the attention of the bugs of the rim and make them yours.</tooltip>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+</Defs>

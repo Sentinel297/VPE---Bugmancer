@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<loadFolders>
+	<v1.5>
+	<li>/</li>
+	<li>1.5/CoreMod</li>
+	<li IfModActive="OskarPotocki.VFE.Insectoid2">1.5/Insectoids2</li>
+	</v1.5>
+	<v1.6>
+	<li>/</li>
+	<li>1.6/CoreMod</li>
+	<li IfModActive="OskarPotocki.VFE.Insectoid2">1.6/Insectoids2</li>
+	</v1.6>
+</loadFolders>
