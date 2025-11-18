@@ -66,7 +66,7 @@
         <li>
          <statFactors>
 <MoveSpeed>1.30</MoveSpeed>
-<MeleeCooldownFactor>3</MeleeCooldownFactor>
+<VEF_MeleeAttackSpeedFactor>3</VEF_MeleeAttackSpeedFactor>
 </statFactors>
         </li>
       </stages>
@@ -144,8 +144,8 @@
 		<painFactor>0.80</painFactor>
 		<naturalHealingFactor>1.50</naturalHealingFactor>
          <statFactors>
-<RangedCooldownFactor>1.50</RangedCooldownFactor>
-<MeleeCooldownFactor>1.50</MeleeCooldownFactor>
+<VEF_RangeAttackSpeedFactor>1.50</VEF_RangeAttackSpeedFactor>
+<VEF_MeleeAttackSpeedFactor>1.50</VEF_MeleeAttackSpeedFactor>
 		 <MoveSpeed>1.10</MoveSpeed>
 		 <InjuryHealingFactor>1.5</InjuryHealingFactor>
 		 </statFactors>
