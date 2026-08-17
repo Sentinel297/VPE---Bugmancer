@@ -416,7 +416,7 @@
         <spawnSound>Hive_Spawn</spawnSound>
         <initialPawnsPoints>200</initialPawnsPoints>
         <maxSpawnedPawnsPoints>500</maxSpawnedPawnsPoints>
-		<!-- <pawnSpawnIntervalDays>0</pawnSpawnIntervalDays> -->
+		<pawnSpawnIntervalDays>0</pawnSpawnIntervalDays>
       </li>
       <li Class="CompProperties_SelfhealHitpoints">
         <ticksPerHeal>6000</ticksPerHeal> <!-- 60k ticks = 1 day, 10 hp per day -->
